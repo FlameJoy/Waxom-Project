@@ -1,0 +1,78 @@
+.counters 
+  @include window-size
+  @include flex-center
+  background: linear-gradient(90deg, #211b19, #4e3427)
+  &-container
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 60px 0
+.counter
+  display: grid
+  justify-items: center
+  &-count
+    font-family: "Montserrat", sans-serif
+    font-size: 48px
+    font-weight: 300
+    text-align: center
+    color: #fff
+    padding-top: 15px
+  &-info
+    font-family: "Montserrat", sans-serif
+    font-size: 14px
+    font-weight: 500
+    text-align: center
+    text-transform: uppercase
+    line-height: 1.2em
+    color: #c7b299
+    padding-top: 15px
+    padding-bottom: 25px
+  &::after
+    display: block
+    content: ''
+    border-bottom: 1px solid #c7b299
+    width: 30px
+  &::before
+    font-family: FontAwesome
+    font-size: 60px
+    color: #c7b299
+.counter:nth-child(1)::before
+  content: "\f0c0"
+.counter:nth-child(2)::before
+  content: "\f0f4"
+.counter:nth-child(3)::before
+  content: "\f0e6"
+.counter:nth-child(4)::before
+  content: "\f164"
+.counter:nth-child(5)::before
+  content: "\f0f5"
+
+// Adaptivity
+@media (max-width: 800px)
+  .counter
+    &-count
+      font-size: 32px
+    &-info
+      font-size: 14px
+    &::before
+      font-size: 48px
+
+@media (max-width: 800px)
+  .counter
+    &-count
+      font-size: 28px
+    &-info
+      font-size: 14px
+      max-width: 90px
+    &::before
+      font-size: 42px
+
+@media (max-width: 500px)
+  .counter
+    &-count
+      font-size: 18px
+    &-info
+      font-size: 10px
+      width: 50px
+    &::before
+      font-size: 24px

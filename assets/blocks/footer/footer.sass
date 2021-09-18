@@ -1,0 +1,172 @@
+.social
+  @include window-size
+  @include flex-center
+  background-color: #191919
+  padding-bottom: 60px
+  &-container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    column-gap: 40px
+    justify-content: space-between
+    padding-top: 80px
+  & [class$="__title"]
+      padding-top: 30px
+.copyrights
+  @include window-size
+  @include flex-center
+  background-color: #111111
+
+.about-waxom .logo__title
+  padding-top: 0
+
+.about-waxom,
+.recent-posts-footer,
+.our-twitter,
+.dribbble-widjet
+  grid-column: span 3
+
+.about
+  &-text
+    @extend %text
+    width: auto
+    font-family: "montserrat", sans-serif
+    font-weight: 500
+    color: #555555
+    text-align: left
+    padding-top: 30px
+    line-height: 1.5em
+.read-more__link
+  font-family: "montserrat", sans-serif
+  font-size: 14px
+  font-weight: 600
+  color: #d1d1d1
+  display: flex
+  align-items: center
+  padding-top: 15px
+  &::after
+    font-family: FontAwesome
+    content: '\f0da'
+    font-size: 11px
+    margin-left: 10px
+    margin-top: 2.5px
+
+.recent-posts-footer, 
+.our-twitter,
+.dribbble-widjet
+  &__title
+    font-family: "Raleway", sans-serif
+    font-size: 24px
+    font-weight: 700
+    color: #fff
+    padding-bottom: 15px
+
+.post
+  padding-top: 15px
+  &__date
+    display: block
+    font-family: "montserrat", sans-serif
+    font-size: 12px
+    color: #313131
+  &__text
+    font-family: "montserrat", sans-serif
+    font-size: 14px
+    font-weight: 600
+    color: #484848
+    padding-top: 5px
+  &:hover
+    .post__date
+      color: #918f8f
+    .post__text
+      color: #c7b299
+  &::after
+    display: block
+    content: ''
+    width: 100% 
+    border-bottom: 1px solid #313131
+    padding-top: 20px
+  &:nth-child(4)::after
+    display: none
+    
+  
+.twitter-post
+  &__text
+    font-family: "montserrat", sans-serif
+    font-size: 14px
+    font-weight: 600
+    color: #484848
+    padding-top: 10px
+  &__date
+    display: block
+    font-family: "montserrat", sans-serif
+    font-size: 12px
+    color: #313131
+    margin-top: 10px
+  &::after
+    display: block
+    content: ''
+    width: 100% 
+    border-bottom: 1px solid #313131
+    padding-top: 20px
+  &:nth-child(4)::after
+    display: none
+  &__link
+    &:link, &:visited
+      color: #00bff3
+
+.our-twitter :nth-child(4) .twitter-post__link
+  &:link, &:visited
+    color: #918f8f
+
+.copyright,
+.author
+  &-container
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 40px 0
+  &__link
+    font-family: "monserrat", sans-serif
+    font-size: 13px
+    color: #484848
+    padding-right: 12px
+    cursor: pointer
+    &::after
+      content: ""
+      border-right: 1px solid #484848
+      padding: 0 6px
+    &.faq
+      text-transform: uppercase
+      color: #c7b299
+
+.white-color
+  color: #918f8f
+
+.copyright__link,
+.author__link
+  &:nth-last-child(1)::after
+    display: none
+
+// Adaptivity
+@media (max-width: 800px)
+  .dribbble-widjet
+    display: none
+
+  .about-waxom,
+  .recent-posts-footer,
+  .our-twitter,
+  .dribbble-widjet
+    grid-column: span 4
+
+@media (max-width: 500px)
+  .social
+    &-container
+      column-gap: 20px
+
+  .about-waxom
+    display: none
+
+  .about-waxom,
+  .recent-posts-footer,
+  .our-twitter,
+  .dribbble-widjet
+    grid-column: span 6

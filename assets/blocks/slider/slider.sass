@@ -1,0 +1,128 @@
+.slider
+  @include flex-center
+  position: relative
+  user-select: none
+
+  [class*="title"]
+    font-family: "Raleway"
+    text-align: center
+    color:#fff
+    line-height: 1.2em
+
+  &__container
+    @include flex-center
+    width: 100%
+    height: auto
+    padding: 20% 5% 5% 5%
+
+  &__slide
+    display: none
+    width: 600px
+    height: 500px
+    animation: fade 0.5s ease
+
+  &__title
+    font-size: 52px
+    font-weight: 800
+  
+  &__suptitle
+    font-size: 36px
+    font-weight: 400
+
+  &__text
+    font-family: "Montserrat"
+    font-size: 16px
+    color: #fff
+    font-weight: 300
+  
+  &_center-text
+    padding: 5px 0
+  
+  &__icon
+    width: 100px
+    height: 100px
+    fill: #a4a3a0
+
+  &-btn_active:hover &__icon
+    fill: #d3c1ad
+
+  &__prev, 
+  &__next
+    display: block
+    position: absolute
+    top: 35%
+
+  &__prev
+    left: 15%
+
+  &__next
+    right: 15%
+  
+  &__dots
+    position: absolute
+    top: 95%
+    display: flex
+    flex-direction: row
+    align-items: center
+    user-select: none
+  
+  &__dot
+    border-radius: 50%
+    height: 15px
+    width: 15px
+    background-color: #939395
+    display: inline-block
+    margin: 0 4px
+    transition: background-color 200ms ease
+    &:hover
+      background-color: #5d5d5f
+    
+  &__dot_active
+    border: 3px solid #d3c1ad
+    background-color: transparent
+
+// Adaptivity
+@media (max-width: 1440px)
+  .slider
+    &__prev, 
+    &__next
+      top: 40%
+
+@media (max-width: 1200px)
+  .slider
+    &__prev
+      left: 2%
+    &__next
+      right: 2%
+
+@media (max-width: 1000px)
+  .slider
+    &__suptitle
+      font-size: 24px
+    &__title
+      font-size: 36px
+    &__prev, 
+    &__next
+      top: 30%
+
+@media (max-width: 768px)
+  .slider
+    &__suptitle
+      font-size: 18px
+    &__title
+      font-size: 24px
+    &__container
+      padding: 30% 20% 5% 20%
+      width: 60%
+    &__slide
+      height: 400px
+    &__prev, 
+    &__next
+      top: 40%
+
+@media (max-width: 600px)
+  .slider
+    &__prev
+      left: 0
+    &__next
+      right: 0

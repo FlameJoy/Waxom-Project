@@ -1,0 +1,217 @@
+.portfolio
+  @include flex-center
+  @include window-size
+  background-color: #fff
+  &-tabs
+    @include flex-row
+  &__title
+    @extend %title
+  &__text
+    @extend %suptitle
+    p
+      @extend %text
+
+.portfolio-container
+  display: grid
+  justify-content: center
+  justify-items: center
+  padding-top: 40px
+
+.tabs
+  display: flex
+  flex-direction: row
+  justify-content: center
+
+.tab
+  &__btn
+    font-family: "Montserrat"
+    font-size: 14px
+    text-align: center
+    color: #8c8c8c
+    padding: 10px 20px
+    border-radius: 3px
+    transition: all .2s ease
+    &:hover
+      background-color: #998675
+      color: #fff
+
+.projects-container
+  width: 1170px
+  height: 700px
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  gap: 30px 30px
+  margin-top: 60px
+  justify-content: center
+  .project:nth-child(1)  .project-img
+    background: url(../images/dest/project-1.png) no-repeat center
+  .project:nth-child(2)  .project-img
+    background: url(../images/dest/project-2.png) no-repeat center
+  .project:nth-child(3)  .project-img
+    background: url(../images/dest/project-3.png) no-repeat center
+  .project:nth-child(4)  .project-img
+    background: url(../images/dest/project-4.png) no-repeat center
+  .project:nth-child(5)  .project-img
+    background: url(../images/dest/project-5.png) no-repeat center
+  .project:nth-child(6)  .project-img
+    background: url(../images/dest/project-6.png) no-repeat center
+
+.project
+  position: relative
+  &-img
+    width: 370px
+    height: 240px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all .5s ease
+  &-icons
+    position: absolute
+    top: 110px
+    margin-left: 140px
+    display: flex
+    flex-direction: row
+    column-gap: 10px
+    visibility: hidden
+  &:hover 
+    .project-img
+      filter: brightness(35%)
+    .project-icons
+      visibility: visible
+    .info
+      background: #362f2d
+      &::before
+        border-bottom: 10px solid #362f2d
+
+.project-img
+  background-size: 150%
+
+.left-icon, .right-icon
+  height: 30px
+  width: 30px
+.left-icon
+  background: url(../images/dest/link-icon.png) no-repeat
+.right-icon
+  background: url(../images/dest/lupa.png) no-repeat
+
+.info
+  &::before
+    position: absolute
+    content: ''
+    border: 15px solid transparent
+    border-bottom: 10px solid #fff
+    left: 25px
+    bottom: 95px
+  &-title
+    font-family: "Raleway"
+    font-size: 20px
+    font-weight: 600
+    text-align: left
+    color: #c7b299
+    padding: 10px 20px
+  &-subtitle
+    font-family: "Montserrat"
+    font-size: 14px
+    font-weight: 300
+    text-align: left
+    color: #d1d1d1
+    padding: 10px 20px
+
+// Adaptivity
+  
+@media (max-width: 1200px)
+  .projects-container
+    width: 100%
+    height: auto
+    gap: 10px 10px
+    margin-top: 40px
+
+  .info
+    &::before
+      bottom: 74px
+
+@media (max-width: 800px)
+  .project
+    &-img
+      width: 280px
+      height: 150px
+    &-icons
+      top: 80px
+      margin-left: 100px
+
+  .info
+    &::before
+      bottom: 72px
+    &-title
+      font-size: 18px
+
+  .projects-container .project:nth-child(1)  .project-img,
+  .projects-container .project:nth-child(2)  .project-img,
+  .projects-container .project:nth-child(3)  .project-img,
+  .projects-container .project:nth-child(4)  .project-img,
+  .projects-container .project:nth-child(5)  .project-img,
+  .projects-container .project:nth-child(6)  .project-img
+    background-size: 105%
+    
+@media (max-width: 634px)
+  .project
+    &-img
+      width: 420px
+      height: 290px
+    &-icons
+      top: 135px
+      margin-left: 170px
+
+  .info
+    &::before
+      bottom: 78px
+    &-title
+      font-size: 24px
+
+  .tab
+    &__btn
+      font-size: 12px
+      padding: 10px
+
+@media (max-width: 400px)
+  .portfolio
+    &__title
+      margin-top: 0
+      padding-top: 50px
+  .project
+    &-img
+      width: 300px
+      height: 170px
+    &-icons
+      top: 80px
+      margin-left: 115px
+
+  .tabs
+    flex-wrap: wrap
+    row-gap: 10px
+
+  .tab
+    &__btn
+      font-size: 10px
+      padding: 5px 15px
+
+  .info
+    &::before
+      bottom: 68px
+    &-title
+      font-size: 14px
+      padding: 10px 20px
+    &-subtitle
+      font-size: 14px
+      padding: 10px 20px
+
+
+
+
+
+
+
+
+
+    

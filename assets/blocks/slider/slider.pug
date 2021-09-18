@@ -1,0 +1,40 @@
+.slider
+  .slider__container
+    +slides(
+      'Unique and Modern Design',
+      'Portfolio PSD Template',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    )
+    +slides(
+      'High Usability',
+      'Generic templates',
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    )
+    +slides(
+      'Add to Portfolio',
+      'Portfolio Addition',
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    )
+    +slides(
+      'Beautiful & Practical',
+      'Design',
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    )
+    +slides(
+      'Improve Your Skills',
+      'Git Gud',
+      "It's a Dark Souls reference"
+    )         
+  .slider__control 
+    a.slider__prev.slider-btn_active(onclick="plusSlideIndex(-1)")
+      svg.slider__icon(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16")
+        path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z")
+    a.slider__next.slider-btn_active(onclick="plusSlideIndex(1)")
+      svg.slider__icon(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16")
+        path(fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z")
+  .slider__dots
+    +dots(1)
+    +dots(2)
+    +dots(3)
+    +dots(4)
+    +dots(5)

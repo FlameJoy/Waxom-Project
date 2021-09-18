@@ -1,0 +1,143 @@
+.mobile
+  @include flex-center
+  @include window-size
+  background-color: #fff
+  &-container
+    padding-top: 80px
+  &-title
+    @extend %title
+    text-align: left
+  &-text 
+    @extend %text
+    text-align: left
+    line-height: 1.5em
+  &__list
+    padding: 0 20px
+  &__item
+    @extend %text
+    text-align: left
+    padding: 5px 0
+    display: flex
+    align-items: center
+    &::before
+      font-family: FontAwesome
+      content: "\f138"
+      padding: 0 30px
+      font-size: 24px
+      color: #c7b299
+  &-container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    column-gap: 30px
+    justify-items: center
+  &-img-container
+    grid-column: 1 / 6
+    display: flex
+    align-content: flex-end
+  &-info
+    grid-column: 6 / 12
+    display: flex
+    flex-direction: column
+    row-gap: 40px
+    margin-left: 100px
+    
+// Adaptivity
+@media (max-width: 1440px)
+  .mobile
+    &-container
+      column-gap: 0
+    &-info
+      margin-left: 20px
+      width: 80%
+    
+    &-title
+      font-size: 32px
+    &-text,
+    &__item 
+      font-size: 14px
+      width: 500px
+
+@media (max-width: 1000px)
+  .mobile
+    &-img
+      width: 340px
+      height: 500px
+    &-title
+      font-size: 24px
+    &-text,
+    &__item 
+      font-size: 14px
+      width: 350px
+      padding-bottom: 10px
+      font-size: 14px
+      &::before
+        padding: 0 20px
+        font-size: 16px
+    &-img-container
+      width: 340px
+      height: 500px
+      align-self: flex-end
+
+@media (max-width: 800px)
+  .mobile
+    &-img
+      width: 340px
+      height: 500px
+    &-title
+      font-size: 24px
+    &-text,
+    &__item 
+      font-size: 14px
+      width: 340px
+      font-size: 14px
+      &::before
+        padding: 0 20px
+        font-size: 16px
+    &-img-container
+      width: 340px
+      height: 500px
+      align-self: flex-end
+
+@media (max-width: 700px)
+  .mobile
+    width: 100%
+    &-container
+      display: flex
+      flex-direction: column-reverse
+    &-info
+      justify-content: center
+      margin-left: 0
+      margin: 0 auto
+    &-img
+      width: 300px
+      height: 400px
+      margin: 0 auto
+    &-title
+      font-size: 24px
+      text-align: center
+      padding-top: 0
+    &-text
+      text-align: center
+      margin: 0 auto
+    &__list
+      padding-left: 80px
+    &__item 
+      text-align: left
+      padding-bottom: 10px
+    &-img-container
+      width: 340px
+      height: 400px
+      padding-top: 30px
+      margin: 0 auto
+
+@media (max-width: 600px)
+  .mobile
+    &__list
+      padding-left: 30px
+
+@media (max-width: 500px)
+  .mobile
+    display: none
+
+
+

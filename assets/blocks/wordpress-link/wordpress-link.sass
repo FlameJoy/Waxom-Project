@@ -1,0 +1,59 @@
+.wordpress
+  @include flex-center
+  align-items: center
+  background: linear-gradient(to right, #211b19, #4e3427)
+  &-container
+    @include flex-row
+    justify-content: space-between
+  &__text-section 
+    display: flex
+    flex-direction: column
+    align-self: center
+    padding-left: 30px
+  &__title
+    font-family: "Raleway"
+    font-size: 28px
+    color: #c7b299
+  &__title span
+    color: #fff
+  &__text
+    font-family: "Montserrat"
+    font-size: 18px
+    color: #5b524f
+    padding-top: 15px
+
+.btn-wordpress
+  padding: 15px 28px
+  margin-right: 30px
+
+
+// Adaptivity
+
+@media (max-width: 1000px)
+  .wordpress
+    &__title
+      font-size: 22px
+    &__text
+      font-size: 14px
+
+@media (max-width: 800px)
+  .btn-wordpress
+    margin-right: 0
+
+  .btn__link
+    font-size: 14px
+
+@media (max-width: 700px)
+  .wordpress
+    &__text-section 
+      padding-left: 10px
+    &__title
+      font-size: 16px
+    &__text
+      font-size: 10px
+
+  .btn__link
+    font-size: 10px
+
+  .btn-wordpress
+    padding: 5px 20px

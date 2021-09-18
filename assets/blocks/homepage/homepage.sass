@@ -1,0 +1,158 @@
+.homepage 
+  background: url(../images/dest/photo-wrapper.png) no-repeat center
+  background-position-y: 0%
+  position: relative
+  &::before
+    display: block
+    position: absolute
+    content: ''
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    background-color: rgba(0, 0, 0, .6)
+
+.header
+  position: relative
+  padding-top: 30px
+
+.header-container
+  @include flex-row
+  justify-content: space-between
+
+.logo
+  &__title
+    font-family: "Raleway"
+    font-size: 34px
+    color:#fff
+  &__link
+    display: flex
+    align-items: center
+    &:hover
+      .logo__title, .logo__icon g
+        color: #c7b299
+        fill: #c7b299
+
+.homepage-menu
+  @include flex-row
+  align-items: center
+  &__list
+    @include flex-row
+    justify-content: space-between
+    user-select: none
+  &__item
+    padding: 0 15px
+  &__link
+    font-family: "Montserrat"
+    font-size: 14px
+    color: #fff
+    text-align: center
+    &:hover,
+    &:active
+      color: #c7b299
+
+.homepage-dropdown-menu
+  display: none
+  &__content
+    position: absolute
+    display: none
+    margin-top: 5px
+    z-index: 10
+  &__list
+    background-color: rgba(0, 0, 0, .8)
+    border-radius: 3px
+  &__item
+    padding: 15px
+    cursor: pointer
+    &:hover
+      background-color: #ffffff15
+      .homepage-dropdown-menu__link
+        color: #c7b299
+  &__link
+    font-family: "Montserrat"
+    font-size: 18px
+    color: #fff
+  &__btn
+    background-color: transparent
+    border: none
+    font-family: "Montserrat"
+    font-size: 18px
+    color: #fff
+    cursor: pointer
+    text-transform: uppercase
+    &:hover
+      color: #c7b299
+
+.homepage-dropdown-menu:hover .homepage-dropdown-menu__content, .homepage-dropdown-menu__content:hover
+  display: block
+
+.fas
+  font-size: 24px
+  color: #939395
+  cursor: pointer
+  margin-left: 15px
+
+.homepage-icon
+  @include flex-row
+  margin-left: 40px
+  &__cart
+    background: url(../images/dest/cart-icon.png) no-repeat
+  &__search
+    background: url(../images/dest/search-icon.png) no-repeat
+.icon
+  display: block
+  height: 24px
+  width: 24px
+  opacity: 0.5
+  padding: 0 12px
+  &:hover
+    opacity: 1
+    
+// Adaptivity
+
+@media (max-width: 1440px)
+  .logo
+    &__title
+      font-size: 24px
+
+@media (max-width: 1100px)
+  .homepage 
+    .header-container
+      justify-content: space-evenly
+
+  .homepage-menu
+    .homepage-menu__item
+      padding: 0 5px
+      
+@media (max-width: 1000px)
+  .homepage-menu__list 
+    display: none
+
+  .homepage-dropdown-menu
+    display: block
+
+@media (max-width: 500px)
+  .logo
+    &__title
+      font-size: 18px
+    &__icon
+      width: 44px 
+      height: 36px
+  .homepage-dropdown-menu__btn
+    font-size: 16px
+  .fas
+    font-size: 18px
+  .slider__control
+    .slider__icon
+      width: 50px
+      height: 50px 
+@media (max-width: 400px)
+  .slider__suptitle
+    .slider__text 
+      font-size: 12px
+  .homepage-dropdown-menu__btn
+    font-size: 12px
+  .homepage-icon
+    margin-left: 10px
+  .icon
+    padding: 0 8px

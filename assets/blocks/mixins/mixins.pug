@@ -1,0 +1,30 @@
+mixin slides(suptitle, title, text)
+  .slider__slide.fade 
+    .slider__suptitle.slider_center-text=suptitle 
+      h2.slider__title.slider_center-text=title 
+      p.slider__text.slider_center-text=text
+      button.btn.slider__btn 
+        a.btn__link(href="#") get started
+
+mixin dots(number)
+  span.slider__dot(onclick=`currentSlide(${number})`)
+
+mixin possibility(icon, title, text)
+  .possibility
+    h3.possibility__title=title 
+    p.possibility__text=text
+
+mixin tab(name)
+  .tab 
+    a.tab__btn=name
+
+mixin project(title, subtitle)
+  .project
+    a.project-img(href="#")
+    .project-icons
+      .left-icon 
+      .right-icon
+    .info
+      .info-title=title
+      .info-subtitle=subtitle
+  
