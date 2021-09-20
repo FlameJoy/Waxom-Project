@@ -7,10 +7,12 @@
   &-title
     @extend %title
     text-align: left
+    animation-delay: .6s
   &-text 
     @extend %text
     text-align: left
     line-height: 1.5em
+    animation-delay: .8s
   &__list
     padding: 0 20px
   &__item
@@ -34,12 +36,15 @@
     grid-column: 1 / 6
     display: flex
     align-content: flex-end
+    animation-delay: .2s
   &-info
     grid-column: 6 / 12
     display: flex
     flex-direction: column
     row-gap: 40px
     margin-left: 100px
+  &-advantages
+    animation-delay: 1s
     
 // Adaptivity
 @media (max-width: 1440px)

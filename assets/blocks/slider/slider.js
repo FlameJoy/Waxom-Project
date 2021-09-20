@@ -1,4 +1,4 @@
-sliderIndex = 1;
+let sliderIndex = 1;
 showSlides();
 
 function plusSlideIndex(n){
@@ -28,4 +28,5 @@ function showSlides(n) {
 
     slides[sliderIndex - 1].style.display = "block";
     dots[sliderIndex - 1].className += " slider__dot_active";
+    
 }

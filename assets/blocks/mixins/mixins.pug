@@ -10,7 +10,7 @@ mixin dots(number)
   span.slider__dot(onclick=`currentSlide(${number})`)
 
 mixin possibility(icon, title, text)
-  .possibility
+  .possibility.animate__backInLeft.wow
     h3.possibility__title=title 
     p.possibility__text=text
 
@@ -19,7 +19,7 @@ mixin tab(name)
     a.tab__btn=name
 
 mixin project(title, subtitle)
-  .project
+  .project.animate__flipInX.wow
     a.project-img(href="#")
     .project-icons
       .left-icon 
